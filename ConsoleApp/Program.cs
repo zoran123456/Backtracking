@@ -12,36 +12,37 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
-            KnightsTour tour = new KnightsTour();
-
-            while (true)
-            {
-                Console.Clear();
-
-                Console.WriteLine("Solving...");
-                Console.WriteLine("");
+            NQueenProblem problem = new NQueenProblem();
 
 
-                Stopwatch sw = Stopwatch.StartNew();
+            Console.Clear();
 
-                bool ok = tour.Solve(0, 0);
-
-                sw.Stop();
-
-                if (ok)
-                    tour.DisplaySolution(sw);
-                else
-                    Console.WriteLine("No solution found :(");
+            Console.WriteLine("Solving...");
+            Console.WriteLine("");
 
 
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine();
+            Stopwatch sw = Stopwatch.StartNew();
 
-                Console.WriteLine("Press key for new test.");
+            bool ok = problem.Solve();
 
-                Console.ReadKey();
-            }
+            Console.WriteLine($"Finding solution took {sw.Elapsed.Milliseconds} ms");
+
+            sw.Stop();
+
+            if (ok)
+                problem.DisplayBoard();
+            else
+                Console.WriteLine("No solution found :(");
+
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Press key to exit.");
+
+            Console.ReadKey();
+
 
         }
     }
