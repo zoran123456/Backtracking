@@ -1,5 +1,5 @@
 # Backtracking
-Various C# backtracking algorithms for studying
+Various C# backtracking algorithms you can study or implement
 
 Currently project contains following algorithms:
 
