@@ -130,7 +130,7 @@ namespace ConsoleApp
 
 
 
-            // Place all numbers by recursively call this method
+            // Place all numbers by recursively calling this method
             return PlaceNumber_Backtrack();
         }
 
@@ -175,7 +175,7 @@ namespace ConsoleApp
             byte x, y;
             bool foundEmptyPosition = GetFirstEmptyPosition(out x, out y);
 
-            // If not empty position exists, assume board is empty
+            // If not empty position exists, assume board is complete
             // This is just for security checking, method should always return true
             if (!foundEmptyPosition)
                 return true;
