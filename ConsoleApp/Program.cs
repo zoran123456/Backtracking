@@ -9,10 +9,13 @@ namespace ConsoleApp
 {
     class Program
     {
+        
+
 
         static void Main(string[] args)
         {
-            NQueenProblem problem = new NQueenProblem();
+
+            SudokuGenerator generator = new SudokuGenerator();
 
 
             Console.Clear();
@@ -23,14 +26,14 @@ namespace ConsoleApp
 
             Stopwatch sw = Stopwatch.StartNew();
 
-            bool ok = problem.Solve();
+            bool ok = generator.Generate();
 
             Console.WriteLine($"Finding solution took {sw.Elapsed.Milliseconds} ms");
 
             sw.Stop();
 
-            if (ok)
-                problem.DisplayBoard();
+            if (true)
+                generator.DisplayBoard();
             else
                 Console.WriteLine("No solution found :(");
 
